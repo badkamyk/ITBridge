@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
 
-const pages = ['Latest news', 'Ask a mentor', 'Mentorship', 'About', 'Contact us'];
+const pages = ['Latest news', 'Ask a mentor', 'About', 'Contact us'];
 const settings = ['Profile', 'Settings', 'Logout'];
 
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ background: 'linear-gradient(-90deg,#02203c,#001528)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -113,7 +113,11 @@ export default function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block', '&:hover': { color: 'secondary.main' } }}
+              >
                 {page}
               </Button>
             ))}
