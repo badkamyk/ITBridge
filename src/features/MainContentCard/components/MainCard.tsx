@@ -1,4 +1,3 @@
-import SpeakerNotesOutlinedIcon from '@mui/icons-material/SpeakerNotesOutlined';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -6,8 +5,15 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-// TODO add props
-export default function MainCard() {
+export default function MainCard({
+  title,
+  description,
+  icon,
+}: {
+  title: string;
+  description: string;
+  icon: JSX.Element;
+}) {
   return (
     <Box
       sx={{
@@ -34,16 +40,19 @@ export default function MainCard() {
       >
         <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Box sx={{ maxHeight: 50, mb: 1.5 }}>
-            <SpeakerNotesOutlinedIcon
-              className="card-svg"
-              sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }}
-            />
+            {/*<SpeakerNotesOutlinedIcon*/}
+            {/*  className="card-svg"*/}
+            {/*  sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }}*/}
+            {/*/>*/}
+            {icon}
           </Box>
           <Typography sx={{ mb: 1.5, fontWeight: 'bold' }} color="black" gutterBottom>
-            adjective
+            {/*adjective*/}
+            {title}
           </Typography>
           <Typography variant="body2" sx={{ maxWidth: 200, textAlign: 'center' }}>
-            well meaning and kindly. well meaning and kindly. well meaning and kindly. well meaning and kindly.
+            {/*well meaning and kindly. well meaning and kindly. well meaning and kindly. well meaning and kindly.*/}
+            {description}
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: 'center' }}>
