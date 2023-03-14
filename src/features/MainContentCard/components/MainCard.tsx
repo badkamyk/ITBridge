@@ -39,19 +39,11 @@ export default function MainCard({
         }}
       >
         <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Box sx={{ maxHeight: 50, mb: 1.5 }}>
-            {/*<SpeakerNotesOutlinedIcon*/}
-            {/*  className="card-svg"*/}
-            {/*  sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }}*/}
-            {/*/>*/}
-            {icon}
-          </Box>
+          <Box sx={{ maxHeight: 50, mb: 1.5 }}>{icon}</Box>
           <Typography sx={{ mb: 1.5, fontWeight: 'bold' }} color="black" gutterBottom>
-            {/*adjective*/}
             {title}
           </Typography>
           <Typography variant="body2" sx={{ maxWidth: 200, textAlign: 'center' }}>
-            {/*well meaning and kindly. well meaning and kindly. well meaning and kindly. well meaning and kindly.*/}
             {description}
           </Typography>
         </CardContent>
