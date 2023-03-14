@@ -2,7 +2,10 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import AdbIcon from '@mui/icons-material/Adb';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const footerLinks = [
   { title: 'Home', href: '/' },
@@ -11,10 +14,10 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { title: 'Facebook', href: 'https://www.facebook.com/itbridge.io/' },
-  { title: 'Twitter', href: 'https://twitter.com/itbridge_io' },
-  { title: 'LinkedIn', href: 'https://www.linkedin.com/company/itbridge-io/' },
-  { title: 'Instagram', href: 'https://www.instagram.com/itbridge.io/' },
+  { title: 'Facebook', href: 'https://www.facebook.com/itbridge.io/', icon: <FacebookIcon /> },
+  { title: 'Twitter', href: 'https://twitter.com/itbridge_io', icon: <TwitterIcon /> },
+  { title: 'LinkedIn', href: 'https://www.linkedin.com/company/itbridge-io/', icon: <LinkedInIcon /> },
+  { title: 'Instagram', href: 'https://www.instagram.com/itbridge.io/', icon: <InstagramIcon /> },
 ];
 export default function Footer() {
   return (
@@ -24,7 +27,7 @@ export default function Footer() {
         background: 'linear-gradient(-90deg,#02203c,#001528)',
         color: 'primary.contrastText',
         mt: 3,
-        py: 4,
+        py: 5,
         bottom: 0,
         display: 'flex',
         flexDirection: 'column',
@@ -44,7 +47,7 @@ export default function Footer() {
       {/*    </Link>*/}
       {/*  ))}*/}
       {/*</Box>*/}
-      <Box>
+      <Box sx={{ mb: 2 }}>
         {socialLinks.map((link) => (
           <Link
             key={link.title}
@@ -52,11 +55,13 @@ export default function Footer() {
             underline="none"
             sx={{ color: 'primary.contrastText', mx: 2, fontSize: { xs: '0.8rem', sm: '1rem' } }}
           >
-            <AdbIcon />
+            <Box component="span" sx={{ '&:hover': { color: 'primary.main' } }}>
+              {link.icon}
+            </Box>
           </Link>
         ))}
       </Box>
-      <Typography variant={'body2'} align={'center'} sx={{ width: '100%', flexGrow: 1 }}>
+      <Typography variant={'body2'} align={'center'} sx={{ flexGrow: 1 }}>
         ITBRIDGE © 2023
       </Typography>
     </BottomNavigation>
