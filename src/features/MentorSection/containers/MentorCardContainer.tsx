@@ -5,33 +5,28 @@ import BoldHeader2 from '../../../shared/ui/Header/BoldHeader';
 const cardData = [
   {
     name: 'John Doe',
-    title: 'React.js specialist',
-    description: "He's a senior developer with 10+ years of experience",
-    url: 'https://images.unsplash.com/photo-1616766098946-e4fabb7d6da0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    description: 'Netflix developer with 10+ years of experience',
+    url: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png',
   },
   {
-    name: 'Chad Smith',
-    title: 'Angular.js specialist',
-    description: "He's a senior developer with 10+ years of experience",
-    url: 'https://images.unsplash.com/photo-1616766098946-e4fabb7d6da0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    name: 'Elisabeth Smith',
+    description: 'Algorithms specialist working at Google',
+    url: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png',
   },
   {
     name: 'Jesse Green',
-    title: 'Vue.js specialist',
-    description: "He's a senior developer with 10+ years of experience",
-    url: 'https://images.unsplash.com/photo-1616766098946-e4fabb7d6da0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    description: 'Airbnb developer with 15+ years of experience',
+    url: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png',
   },
   {
     name: 'Walter Young',
-    title: 'React.js specialist',
-    description: "He's a senior developer with 10+ years of experience",
-    url: 'https://images.unsplash.com/photo-1616766098946-e4fabb7d6da0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    description: 'Software engineer working at Meta',
+    url: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png',
   },
   {
     name: 'Franklin White',
-    title: 'React.js specialist',
-    description: "He's a senior developer with 10+ years of experience",
-    url: 'https://images.unsplash.com/photo-1616766098946-e4fabb7d6da0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    description: 'Twitter Frontend developer',
+    url: 'https://plus.unsplash.com/premium_photo-1664036154109-31e0624d29c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBob3RvJTIwZmFjZSUyMG1hbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
   },
 ];
 
