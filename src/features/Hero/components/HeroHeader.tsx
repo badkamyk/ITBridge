@@ -1,16 +1,15 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Chip, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 
-const technologies = ['React', 'Angular', 'Node', 'Python', 'C++', 'C#', 'Java'];
 export default function HeroHeader() {
   return (
     <Grid
       container
       spacing={2}
       sx={{
-        pt: 6,
+        pt: 3,
         pb: 2,
         px: { xs: 1, sm: 3, md: 4, lg: 8, xl: 9 },
         background: 'linear-gradient(-90deg,#02203c,#001528)',
@@ -20,7 +19,12 @@ export default function HeroHeader() {
       }}
     >
       <Grid item xs={12} sm={12} md={6}>
-        <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 700, color: 'primary.contrastText' }}>
+        <Typography
+          variant="h3"
+          component="h1"
+          gutterBottom
+          sx={{ mt: 5, fontWeight: 700, color: 'primary.contrastText' }}
+        >
           Begin your <br />
           <Box component="span" sx={{ color: 'primary.main' }}>
             IT
@@ -41,33 +45,6 @@ export default function HeroHeader() {
           >
             Learn More
           </Button>
-        </Box>
-        <Typography variant="h5" sx={{ mt: 4, fontWeight: 700, color: 'primary.contrastText' }}>
-          Technologies we learn
-        </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            mt: 2,
-            gap: 4,
-            flexWrap: 'wrap',
-            maxWidth: 600,
-            justifyContent: { xs: 'center', sm: 'start' },
-          }}
-        >
-          {technologies.map((tech) => (
-            <Chip
-              key={tech}
-              label={tech}
-              sx={{
-                mt: 2,
-                p: 3,
-                bgcolor: 'rgb(243 244 246)',
-                color: 'black',
-                '&:hover': { bgcolor: 'primary.main' },
-              }}
-            />
-          ))}
         </Box>
       </Grid>
       <Grid item xs={12} sm={6} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
