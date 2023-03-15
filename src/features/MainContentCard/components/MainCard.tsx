@@ -26,6 +26,10 @@ export default function MainCard({
     >
       <Card
         sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          height: '100%',
           '&:hover': {
             bgcolor: 'grey.100',
             boxShadow: 3,
