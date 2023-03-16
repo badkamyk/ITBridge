@@ -1,11 +1,11 @@
 import BottomNavigation from '@mui/material/BottomNavigation';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Box } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
 const footerLinks = [
   { title: 'Home', href: '/' },
@@ -21,13 +21,11 @@ const socialLinks = [
 ];
 export default function Footer() {
   return (
-    <BottomNavigation
-      component={'footer'}
+    <Box
       sx={{
         background: 'linear-gradient(-90deg,#02203c,#001528)',
         color: 'primary.contrastText',
-        mt: 3,
-        py: 5,
+        py: 2,
         bottom: 0,
         display: 'flex',
         flexDirection: 'column',
@@ -35,35 +33,43 @@ export default function Footer() {
         justifyContent: 'center',
       }}
     >
-      {/*<Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>*/}
-      {/*  {footerLinks.map((link) => (*/}
-      {/*    <Link*/}
-      {/*      key={link.title}*/}
-      {/*      href={link.href}*/}
-      {/*      underline="none"*/}
-      {/*      sx={{ color: 'primary.contrastText', mx: 2, fontSize: { xs: '0.8rem', sm: '1rem' } }}*/}
-      {/*    >*/}
-      {/*      {link.title}*/}
-      {/*    </Link>*/}
-      {/*  ))}*/}
-      {/*</Box>*/}
-      <Box sx={{ mb: 2 }}>
+      <BottomNavigation
+        component={'footer'}
+        sx={{
+          bgcolor: 'transparent',
+        }}
+      >
+        {/*<Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>*/}
+        {/*  {footerLinks.map((link) => (*/}
+        {/*    <Link*/}
+        {/*      key={link.title}*/}
+        {/*      href={link.href}*/}
+        {/*      underline="none"*/}
+        {/*      sx={{ color: 'primary.contrastText', mx: 2, fontSize: { xs: '0.8rem', sm: '1rem' } }}*/}
+        {/*    >*/}
+        {/*      {link.title}*/}
+        {/*    </Link>*/}
+        {/*  ))}*/}
+        {/*</Box>*/}
+        {/*<Box sx={{ mb: 2 }}>*/}
         {socialLinks.map((link) => (
-          <Link
+          <BottomNavigationAction
             key={link.title}
             href={link.href}
-            underline="none"
-            sx={{ color: 'primary.contrastText', mx: 2, fontSize: { xs: '0.8rem', sm: '1rem' } }}
-          >
-            <Box component="span" sx={{ '&:hover': { color: 'primary.main' } }}>
-              {link.icon}
-            </Box>
-          </Link>
+            target="_blank"
+            icon={link.icon}
+            sx={{
+              color: 'primary.contrastText',
+              fontSize: { xs: '0.8rem', sm: '1rem' },
+              '&:hover': { color: 'primary.main' },
+            }}
+          ></BottomNavigationAction>
         ))}
-      </Box>
+        {/*</Box>*/}
+      </BottomNavigation>
       <Typography variant={'body2'} align={'center'} sx={{ flexGrow: 1 }}>
         ITBRIDGE © 2023
       </Typography>
-    </BottomNavigation>
+    </Box>
   );
 }
