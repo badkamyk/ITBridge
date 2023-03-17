@@ -23,7 +23,7 @@ export default function Cube() {
         width: '100%',
         mt: '5rem',
         ml: '9rem',
-        '-webkit-perspective': '750px',
+        WebkitPerspective: '750px',
         display: { xs: 'none', md: 'block' },
       }}
     >
