@@ -12,8 +12,18 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
+import { Link } from '@mui/material';
 
-const pages = ['Latest news', 'Ask a mentor', 'About', 'Contact us'];
+const pages = [
+  {
+    title: 'Ask a mentor',
+    link: '/ask-mentor',
+  },
+  {
+    title: 'Contact',
+    link: '/contact',
+  },
+];
 const settings = ['Profile', 'Settings', 'Logout'];
 
 export default function Navbar() {
@@ -86,8 +96,10 @@ export default function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                  <Link href={page.link} sx={{ textDecoration: 'none' }}>
+                    <Typography textAlign="center">{page.title}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -113,13 +125,14 @@ export default function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', '&:hover': { color: 'secondary.main' } }}
-              >
-                {page}
-              </Button>
+              <Link href={page.link} key={page.title} sx={{ textDecoration: 'none' }}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block', '&:hover': { color: 'secondary.main' } }}
+                >
+                  {page.title}
+                </Button>
+              </Link>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
