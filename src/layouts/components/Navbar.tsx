@@ -13,6 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
 import { Link } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 
 const pages = [
   {
@@ -29,6 +30,7 @@ const settings = ['Profile', 'Settings', 'Logout'];
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const { pathname } = useLocation();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -97,7 +99,10 @@ export default function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                  <Link href={page.link} sx={{ textDecoration: 'none' }}>
+                  <Link
+                    href={page.link}
+                    sx={{ textDecoration: 'none', color: pathname === page.link ? 'secondary.main' : 'inherit' }}
+                  >
                     <Typography textAlign="center">{page.title}</Typography>
                   </Link>
                 </MenuItem>
@@ -128,7 +133,12 @@ export default function Navbar() {
               <Link href={page.link} key={page.title} sx={{ textDecoration: 'none' }}>
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', '&:hover': { color: 'secondary.main' } }}
+                  sx={{
+                    my: 2,
+                    display: 'block',
+                    '&:hover': { color: 'secondary.main' },
+                    color: pathname === page.link ? 'secondary.main' : 'white',
+                  }}
                 >
                   {page.title}
                 </Button>
