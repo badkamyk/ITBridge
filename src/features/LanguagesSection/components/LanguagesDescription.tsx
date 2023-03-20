@@ -43,7 +43,7 @@ export default function LanguagesDescription() {
   return (
     <Box sx={{ textAlign: { xs: 'center', md: 'left' }, px: 2, pt: 1, bgcolor: 'grey.100' }}>
       <Typography variant={'h4'} sx={{ fontWeight: 500, mt: 4 }}>
-        We speak 9 languages
+        We speak 6 languages
       </Typography>
       <Typography variant={'body2'} sx={{ fontWeight: 400, mb: 3, mt: 2, textAlign: 'left', maxWidth: '35em' }}>
         There&apos;s nothing more frustrating than opening an interview prep book, only to find a bunch of solutions in

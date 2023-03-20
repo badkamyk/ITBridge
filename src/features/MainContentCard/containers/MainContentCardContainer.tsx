@@ -1,35 +1,42 @@
 import Box from '@mui/material/Box';
-import JavascriptIcon from '@mui/icons-material/Javascript';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import CodeIcon from '@mui/icons-material/Code';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import BackgroundSVG from '../components/BackgroundSVG';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import MainCard from '../components/MainCard';
 
 const cardInfo = [
   {
-    title: 'React',
-    description: 'We will start with the basics of React and then move on to more advanced topics',
+    title: 'Problem with your code',
+    description: "You're tired of looking at your code and not knowing what to do next",
     icon: (
-      <JavascriptIcon className="card-svg" sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }} />
+      <BugReportIcon className="card-svg" sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }} />
     ),
   },
   {
-    title: 'Angular',
-    description: 'Angular lessons will be taught by a senior developer with 10+ years of experience',
+    title: 'Choose your programming language',
+    description: 'Our mentors are experts in multiple programming languages',
+    icon: <CodeIcon className="card-svg" sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }} />,
+  },
+  {
+    title: 'Ask a question',
+    description: 'Feel free to ask any question you have about your code',
     icon: (
-      <JavascriptIcon className="card-svg" sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }} />
+      <QuestionMarkIcon
+        className="card-svg"
+        sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }}
+      />
     ),
   },
   {
-    title: 'Svelte',
-    description: 'Modern approach to building web applications, with less boilerplate and a smaller learning curve',
+    title: 'Get an answer',
+    description: 'You will get an answer from our mentors within 24 hours',
     icon: (
-      <JavascriptIcon className="card-svg" sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }} />
-    ),
-  },
-  {
-    title: 'Vue',
-    description: 'Lessons are structured in a way that will help you learn Vue in a short period of time',
-    icon: (
-      <JavascriptIcon className="card-svg" sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }} />
+      <QuestionAnswerIcon
+        className="card-svg"
+        sx={{ fontSize: 50, transition: 'transform .3s', color: 'primary.main' }}
+      />
     ),
   },
 ];
