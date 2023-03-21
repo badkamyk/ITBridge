@@ -7,12 +7,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
-const footerLinks = [
-  { title: 'Home', href: '/' },
-  { title: 'About', href: '/about' },
-  { title: 'Contact', href: '/contact' },
-];
-
 const socialLinks = [
   { title: 'Facebook', href: 'https://www.facebook.com/itbridge.io/', icon: <FacebookIcon /> },
   { title: 'Twitter', href: 'https://twitter.com/itbridge_io', icon: <TwitterIcon /> },
@@ -25,7 +19,7 @@ export default function Footer() {
       sx={{
         background: 'linear-gradient(-90deg,#02203c,#001528)',
         color: 'primary.contrastText',
-        py: 2,
+        py: 1,
         bottom: 0,
         display: 'flex',
         flexDirection: 'column',
@@ -39,19 +33,6 @@ export default function Footer() {
           bgcolor: 'transparent',
         }}
       >
-        {/*<Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>*/}
-        {/*  {footerLinks.map((link) => (*/}
-        {/*    <Link*/}
-        {/*      key={link.title}*/}
-        {/*      href={link.href}*/}
-        {/*      underline="none"*/}
-        {/*      sx={{ color: 'primary.contrastText', mx: 2, fontSize: { xs: '0.8rem', sm: '1rem' } }}*/}
-        {/*    >*/}
-        {/*      {link.title}*/}
-        {/*    </Link>*/}
-        {/*  ))}*/}
-        {/*</Box>*/}
-        {/*<Box sx={{ mb: 2 }}>*/}
         {socialLinks.map((link) => (
           <BottomNavigationAction
             key={link.title}
@@ -65,7 +46,6 @@ export default function Footer() {
             }}
           ></BottomNavigationAction>
         ))}
-        {/*</Box>*/}
       </BottomNavigation>
       <Typography variant={'body2'} align={'center'} sx={{ flexGrow: 1 }}>
         ITBRIDGE © 2023
