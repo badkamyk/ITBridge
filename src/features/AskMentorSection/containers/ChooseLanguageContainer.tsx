@@ -32,7 +32,7 @@ const chooseLanguageData = [
 export default function ChooseLanguageContainer() {
   const [chosenLanguage, setChosenLanguage] = useState('');
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} sx={{ mx: { lg: 'auto' } }}>
       {chooseLanguageData.map((card) => (
         <Grid key={card.name} item xs={4} sm={6} md={4}>
           <ChooseLanguageCard {...card} setChosenLanguage={setChosenLanguage} chosenLanguage={chosenLanguage} />
