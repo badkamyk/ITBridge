@@ -39,7 +39,7 @@ const rows = [
 
 export default function TableSection() {
   return (
-    <TableContainer component={Paper} sx={{ mt: 10 }}>
+    <TableContainer component={Paper} sx={{ mt: 10 }} id="comparison-table">
       <Table sx={{ minWidth: 650, width: '60%', mx: 'auto' }} aria-label="table with comparison">
         <TableHead>
           <TableRow>
