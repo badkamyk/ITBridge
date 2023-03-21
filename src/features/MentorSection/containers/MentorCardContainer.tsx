@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import MentorCard from '../components/MentorCard';
-import BoldHeader2 from '../../../shared/ui/Header/BoldHeader';
+import BoldHeader from '../../../shared/ui/Header/BoldHeader';
 
 const cardData = [
   {
@@ -33,7 +33,7 @@ const cardData = [
 export default function MentorCardContainer() {
   return (
     <>
-      <BoldHeader2 text={'Our Mentors'} />
+      <BoldHeader variant="h2" text={'Our Mentors'} />
       <Grid container spacing={4} justifyContent={'center'} sx={{ px: 3, mt: 3 }}>
         {cardData.map((card) => (
           <Grid key={card.name} item xs={12} sm={6} md={2}>

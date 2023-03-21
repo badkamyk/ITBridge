@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import ContactForm from '../components/ContactForm';
-import BoldHeader3 from '../../../shared/ui/Header/BoldHeader';
+import BoldHeader from '../../../shared/ui/Header/BoldHeader';
 
 export default function ContactFormContainer() {
   return (
@@ -15,7 +15,7 @@ export default function ContactFormContainer() {
         mt: 5,
       }}
     >
-      <BoldHeader3 text="Contact us" />
+      <BoldHeader variant="h3" text="Contact us" />
       <ContactForm />
     </Box>
   );
