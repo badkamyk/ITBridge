@@ -7,6 +7,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import DefaultLayout from './layouts/DefaultLayout';
 import ErrorPage from './layouts/components/ErrorPage';
 import ContactFormContainer from './features/Form/containers/ContactFormContainer';
+import AskMentorContainer from './features/AskMentorSection/containers/AskMentorContainer';
+import { Provider } from 'react-redux';
+import { store } from './features/store/store';
 
 const theme = createTheme({
   palette: {
@@ -38,15 +41,22 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <ContactFormContainer />,
       },
+
+      {
+        element: <AskMentorContainer />,
+        path: '/ask-mentor',
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-      <CssBaseline />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+        <CssBaseline />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
