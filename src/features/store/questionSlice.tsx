@@ -5,7 +5,7 @@ const initialState: QuestionStateType = {
   entities: [
     {
       id: nanoid(),
-      date: new Date().toLocaleDateString(),
+      date: new Date().toLocaleString(),
       question: 'What is the best way to learn React?',
     },
   ],
@@ -16,7 +16,7 @@ type DraftQuestionType = RequireOnly<QuestionType, 'question'>;
 const createQuestion = (draftState: DraftQuestionType) => {
   return {
     id: nanoid(),
-    date: new Date().toLocaleDateString(),
+    date: new Date().toLocaleString().replaceAll(',', ''),
     ...draftState,
   };
 };
