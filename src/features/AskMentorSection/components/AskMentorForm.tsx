@@ -3,13 +3,15 @@ import Button from '@mui/material/Button';
 import { askMentorFormSchema, AskMentorFormSchemaType } from './AskMentorFormSchema';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useAppDispatch } from '../../store/hooks';
+import { addQuestion } from '../../store/questionSlice';
 
 export default function AskMentorForm() {
   const {
     handleSubmit,
     control,
-    watch,
     reset,
+    getValues,
     formState: { errors, isSubmitting },
   } = useForm<AskMentorFormSchemaType>({
     resolver: zodResolver(askMentorFormSchema),
@@ -18,13 +20,14 @@ export default function AskMentorForm() {
     },
   });
 
+  const dispatch = useAppDispatch();
+
   const handleSubmitForm = () => {
-    console.log('submit');
+    dispatch(addQuestion(getValues()));
     reset({
       question: '',
     });
   };
-  console.log(watch('question'));
 
   return (
     <Box component="form" sx={{ mt: 3 }} onSubmit={handleSubmit(handleSubmitForm)}>
