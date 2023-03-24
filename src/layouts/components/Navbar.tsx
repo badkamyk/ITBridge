@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import { useState } from 'react';
-import { Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 const pages = [
@@ -46,8 +46,8 @@ export default function Navbar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -92,8 +92,8 @@ export default function Navbar() {
               {pages.map((page) => (
                 <MenuItem key={page.title} onClick={handleCloseNavMenu}>
                   <Link
-                    href={page.link}
-                    sx={{ textDecoration: 'none', color: pathname === page.link ? 'secondary.main' : 'inherit' }}
+                    to={page.link}
+                    style={{ textDecoration: 'none', color: pathname === page.link ? 'secondary.main' : 'inherit' }}
                   >
                     <Typography textAlign="center">{page.title}</Typography>
                   </Link>
@@ -122,7 +122,7 @@ export default function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link href={page.link} key={page.title} sx={{ textDecoration: 'none' }}>
+              <Link to={page.link} key={page.title} style={{ textDecoration: 'none' }}>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
@@ -139,7 +139,7 @@ export default function Navbar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Questions">
-              <IconButton href={'/questions'} size="large" color="inherit">
+              <IconButton component={Link} to={'/questions'} size="large" color="inherit">
                 <PsychologyAltIcon
                   sx={{
                     color: 'white',
