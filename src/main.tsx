@@ -10,6 +10,7 @@ import ContactFormContainer from './features/Form/containers/ContactFormContaine
 import AskMentorContainer from './features/AskMentorSection/containers/AskMentorContainer';
 import { Provider } from 'react-redux';
 import { store } from './features/store/store';
+import QuestionsContainer from './features/QuestionSection/containers/QuestionsContainer';
 
 const theme = createTheme({
   palette: {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         element: <AskMentorContainer />,
         path: '/ask-mentor',
+      },
+      {
+        element: <QuestionsContainer />,
+        path: '/questions',
       },
     ],
   },
