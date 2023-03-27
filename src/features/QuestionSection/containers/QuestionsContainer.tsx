@@ -8,7 +8,6 @@ import BackgroundSVG from '../../MainContentCard/components/BackgroundSVG';
 export default function QuestionsContainer() {
   const questions = useAppSelector(selectMemoizedQuestions);
 
-  console.log(questions);
   return (
     <Container maxWidth="lg">
       <BoldHeader variant={'h4'} text={'Your recently asked questions'} />
