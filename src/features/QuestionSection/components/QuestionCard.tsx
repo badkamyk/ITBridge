@@ -1,5 +1,6 @@
 import { QuestionType } from '../../store/questionSliceTypes';
 import { Box, Typography } from '@mui/material';
+import { languageSVGIcons } from '../../../shared/utils/languageSVGIcons';
 
 export default function QuestionCard(question: QuestionType) {
   return (
@@ -10,24 +11,37 @@ export default function QuestionCard(question: QuestionType) {
         mt: 5,
       }}
     >
-      <Typography
-        variant="h6"
-        component="p"
+      <Box
         sx={{
           mb: 2,
           mt: 6,
-          bgcolor: 'primary.main',
-          color: 'white',
-          p: 1,
-          borderRadius: 6,
-          width: 'fit-content',
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: 'center',
         }}
       >
-        {question.question}
-        <Typography variant="body2" component="span" sx={{ ml: 1, color: 'white', opacity: 0.8 }}>
-          {question.date}
+        <Box component={'svg'} sx={{ width: 36, height: 36, borderRadius: '33%' }} viewBox="0 0 128 128">
+          {languageSVGIcons[question.language]}
+        </Box>
+        <Typography
+          variant="h6"
+          component="p"
+          sx={{
+            mt: { xs: 1, sm: 0 },
+            ml: 1,
+            bgcolor: 'primary.main',
+            color: 'white',
+            p: 1,
+            borderRadius: 6,
+            width: 'fit-content',
+          }}
+        >
+          {question.question}
+          <Typography variant="body2" component="span" sx={{ ml: 1, color: 'white', opacity: 0.8 }}>
+            {question.date}
+          </Typography>
         </Typography>
-      </Typography>
+      </Box>
       <Typography
         variant="body1"
         component="p"
