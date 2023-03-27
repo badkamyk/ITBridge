@@ -2,16 +2,10 @@ import { QuestionStateType, QuestionType, RequireOnly } from './questionSliceTyp
 import { createSlice, nanoid, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState: QuestionStateType = {
-  entities: [
-    {
-      id: nanoid(),
-      date: new Date().toLocaleString(),
-      question: 'What is the best way to learn React?',
-    },
-  ],
+  entities: [],
 };
 
-type DraftQuestionType = RequireOnly<QuestionType, 'question'>;
+type DraftQuestionType = RequireOnly<QuestionType, 'question' | 'language'>;
 
 const createQuestion = (draftState: DraftQuestionType) => {
   return {
