@@ -1,7 +1,10 @@
+export type LanguageType = 'js' | 'ts' | 'python' | 'go' | 'java' | 'cplusplus';
+
 export type QuestionType = {
   id: string;
   question: string;
   date: string;
+  language: LanguageType;
   answer?: string;
 };
 
