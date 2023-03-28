@@ -2,11 +2,12 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { LanguageType } from '../../store/questionSliceTypes';
 
 type ChooseLanguageCardProps = {
-  setChosenLanguage: React.Dispatch<React.SetStateAction<string>>;
+  setChosenLanguage: React.Dispatch<React.SetStateAction<LanguageType>>;
   chosenLanguage: string | undefined;
-  name: string;
+  name: LanguageType;
   image: string;
 };
 export default function ChooseLanguageCard({
