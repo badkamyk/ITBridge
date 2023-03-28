@@ -5,8 +5,9 @@ import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useAppDispatch } from '../../store/hooks';
 import { addQuestion } from '../../store/questionSlice';
+import { LanguageType } from '../../store/questionSliceTypes';
 
-export default function AskMentorForm() {
+export default function AskMentorForm({ chosenLanguage }: { chosenLanguage: LanguageType }) {
   const {
     handleSubmit,
     control,
@@ -23,7 +24,7 @@ export default function AskMentorForm() {
   const dispatch = useAppDispatch();
 
   const handleSubmitForm = () => {
-    dispatch(addQuestion(getValues()));
+    dispatch(addQuestion({ ...getValues(), language: chosenLanguage }));
     reset({
       question: '',
     });
