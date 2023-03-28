@@ -1,36 +1,15 @@
 import { Grid } from '@mui/material';
 import ChooseLanguageCard from '../components/ChooseLangaugeCard';
-import { useState } from 'react';
+import { LanguageType } from '../../store/questionSliceTypes';
+import { chooseLanguageData } from '../../../shared/utils/chooseLanguageData';
 
-const chooseLanguageData = [
-  {
-    name: 'JavaScript',
-    image: './src/assets/images/js-logo.png',
-  },
-  {
-    name: 'TypeScript',
-    image: './src/assets/images/typescript.svg',
-  },
-  {
-    name: 'Python',
-    image: './src/assets/images/python.png',
-  },
-  {
-    name: 'Java',
-    image: './src/assets/images/java-logo-1.png',
-  },
-  {
-    name: 'C++',
-    image: './src/assets/images/C++.png',
-  },
-  {
-    name: 'Go',
-    image: './src/assets/images/golang-logo.png',
-  },
-];
-
-export default function ChooseLanguageContainer() {
-  const [chosenLanguage, setChosenLanguage] = useState('');
+export default function ChooseLanguageContainer({
+  chosenLanguage,
+  setChosenLanguage,
+}: {
+  chosenLanguage: string;
+  setChosenLanguage: React.Dispatch<React.SetStateAction<LanguageType>>;
+}) {
   return (
     <Grid container spacing={2} sx={{ mx: { lg: 'auto' } }}>
       {chooseLanguageData.map((card) => (
