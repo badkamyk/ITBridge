@@ -7,7 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
-const socialLinks = [
+export const socialLinks = [
   { title: 'Facebook', href: 'https://www.facebook.com/itbridge.io/', icon: <FacebookIcon /> },
   { title: 'Twitter', href: 'https://twitter.com/itbridge_io', icon: <TwitterIcon /> },
   { title: 'LinkedIn', href: 'https://www.linkedin.com/company/itbridge-io/', icon: <LinkedInIcon /> },
@@ -48,7 +48,7 @@ export default function Footer() {
         ))}
       </BottomNavigation>
       <Typography variant={'body2'} align={'center'} sx={{ flexGrow: 1 }}>
-        ITBRIDGE © 2023
+        ITBRIDGE © {new Date().getFullYear()}
       </Typography>
     </Box>
   );
