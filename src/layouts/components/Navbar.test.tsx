@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import Navbar from '../layouts/components/Navbar';
-import { pages } from '../layouts/components/Navbar';
+import Navbar from './Navbar';
+import { pages } from './Navbar';
 import { MemoryRouter } from 'react-router-dom';
 
 describe('Navbar', () => {

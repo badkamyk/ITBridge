@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import Footer, { socialLinks } from '../layouts/components/Footer';
+import Footer, { socialLinks } from './Footer';
 import { render, screen } from '@testing-library/react';
 
 describe('Footer', () => {
