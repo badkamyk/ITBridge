@@ -43,6 +43,7 @@ const cardInfo = [
 export default function MainContentCardContainer() {
   return (
     <Box
+      data-testid="MainContentCardContainer"
       sx={{
         display: 'flex',
         flexDirection: 'row',

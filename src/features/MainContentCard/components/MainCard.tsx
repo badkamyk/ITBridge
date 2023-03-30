@@ -17,7 +17,6 @@ export default function MainCard({
 }) {
   return (
     <Box
-      data-testid="MainCard"
       sx={{
         minWidth: 275,
         overflow: 'hidden',
@@ -27,6 +26,7 @@ export default function MainCard({
       }}
     >
       <Card
+        data-testid="MainCard"
         sx={{
           display: 'flex',
           flexDirection: 'column',
