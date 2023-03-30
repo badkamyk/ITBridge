@@ -17,6 +17,7 @@ export default function MainCard({
 }) {
   return (
     <Box
+      data-testid="MainCard"
       sx={{
         minWidth: 275,
         overflow: 'hidden',
