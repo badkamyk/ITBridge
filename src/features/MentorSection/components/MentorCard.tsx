@@ -4,17 +4,25 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
 
-export default function MentorCard({ url, name, description }: { url: string; name: string; description: string }) {
+export default function MentorCard({
+  imgSrc,
+  name,
+  description,
+}: {
+  imgSrc: string;
+  name: string;
+  description: string;
+}) {
   return (
     <Card
       sx={{ minWidth: 145, borderRadius: 2, boxShadow: 1, m: 1, minHeight: { xs: 350, sm: 400, md: 450, lg: 400 } }}
     >
-      <Box>
+      <Box data-testid="MentorCard">
         <CardMedia
           sx={{ backgroundPosition: 'center', backgroundSize: 'cover' }}
           component="img"
           height="240"
-          image={url}
+          image={imgSrc}
           alt="green iguana"
         />
         <CardContent>
