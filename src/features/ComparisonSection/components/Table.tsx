@@ -26,7 +26,7 @@ const cardClasses = {
   height: 40,
 };
 
-const rows = [
+export const rows = [
   createData('100+ Practice Questions', true, true, true),
   createData('Data Structures Content', true, true, true),
   createData('Guided Format', false, true, true),
