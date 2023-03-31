@@ -1,4 +1,4 @@
-import { screen, render, waitFor } from '@testing-library/react';
+import { screen, render, waitFor, fireEvent } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import AskMentorForm from './AskMentorForm';
 import { Provider } from 'react-redux';
@@ -36,6 +36,21 @@ describe('AskMentorForm', () => {
 
     await waitFor(() => {
       expect(screen.getByText('Question must be at least 5 characters')).toBeTruthy();
+    });
+  });
+
+  it('should add item to store', async () => {
+    fireEvent.change(screen.getByRole('textbox'), {
+      target: {
+        value: 'this is a test question',
+      },
+    });
+
+    await screen.getByRole('button').click();
+
+    await waitFor(() => {
+      const state = store.getState();
+      expect(state.questions.entities.length).toBe(1);
     });
   });
 });
