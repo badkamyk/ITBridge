@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 import MentorCard from '../components/MentorCard';
 import BoldHeader from '../../../shared/ui/Header/BoldHeader';
 
-const cardData = [
+export const cardData = [
   {
     name: 'John Doe',
     description: 'Netflix developer with 10+ years of experience',
