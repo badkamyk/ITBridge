@@ -6,7 +6,7 @@ import LooksOneIcon from '@mui/icons-material/LooksOne';
 import GoogleIcon from '@mui/icons-material/Google';
 import BusinessIcon from '@mui/icons-material/Business';
 
-const languageData = [
+export const languageData = [
   {
     title: 'JavaScript',
     subtitle: 'for all you Front-End Developers',
@@ -51,7 +51,11 @@ export default function LanguagesDescription() {
         solutions in 9 popular languages.
       </Typography>
       {languageData.map((language) => (
-        <Box key={language.title} sx={{ display: 'flex', mb: 3, alignItems: 'center' }}>
+        <Box
+          key={language.title}
+          sx={{ display: 'flex', mb: 3, alignItems: 'center' }}
+          data-testid="LanguageDescription"
+        >
           <Box sx={{ maxHeight: 80, mr: 1 }}>{language.icon}</Box>
           <Typography sx={{ fontWeight: 'bold' }} color="black">
             {language.title},{' '}
