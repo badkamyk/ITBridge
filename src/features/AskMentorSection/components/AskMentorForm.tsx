@@ -31,7 +31,7 @@ export default function AskMentorForm({ chosenLanguage }: { chosenLanguage: Lang
   };
 
   return (
-    <Box component="form" sx={{ mt: 3 }} onSubmit={handleSubmit(handleSubmitForm)}>
+    <Box component="form" role="form" sx={{ mt: 3 }} onSubmit={handleSubmit(handleSubmitForm)}>
       <Controller
         name={'question'}
         control={control}

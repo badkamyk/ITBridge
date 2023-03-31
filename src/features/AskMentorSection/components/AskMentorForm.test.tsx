@@ -30,4 +30,12 @@ describe('AskMentorForm', () => {
       expect(screen.getByText('Question must be at least 5 characters')).toBeTruthy();
     });
   });
+
+  it('should send form woth correct data', async () => {
+    await screen.getByRole('button').click();
+
+    await waitFor(() => {
+      expect(screen.getByText('Question must be at least 5 characters')).toBeTruthy();
+    });
+  });
 });
