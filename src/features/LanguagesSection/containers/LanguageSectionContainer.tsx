@@ -5,6 +5,7 @@ import Cube from '../components/Cube';
 export default function LanguageSectionContainer() {
   return (
     <Box
+      data-testid="LanguageSectionContainer"
       sx={{
         display: 'flex',
         justifyContent: 'space-between',

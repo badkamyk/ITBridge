@@ -19,6 +19,7 @@ const transformCSS = [
 export default function Cube() {
   return (
     <Box
+      data-testid="Cube"
       sx={{
         width: '100%',
         mt: '5rem',
