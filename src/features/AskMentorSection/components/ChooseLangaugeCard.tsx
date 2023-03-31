@@ -18,7 +18,7 @@ export default function ChooseLanguageCard({
 }: ChooseLanguageCardProps) {
   const isChosen = chosenLanguage === name;
   return (
-    <Card sx={{ maxWidth: 345 }} onClick={() => setChosenLanguage(name)}>
+    <Card data-testid="ChooseLanguageCard" sx={{ maxWidth: 345 }} onClick={() => setChosenLanguage(name)}>
       <CardActionArea>
         <CardMedia
           component="img"
