@@ -47,6 +47,7 @@ export default function ContactForm() {
     <Box
       ref={formRef}
       component={'form'}
+      role="form"
       onSubmit={handleSubmit(onSubmit)}
       sx={{ display: 'flex', flexDirection: 'column', gap: 3, width: '100%' }}
     >
