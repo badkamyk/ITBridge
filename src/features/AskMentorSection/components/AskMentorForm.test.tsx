@@ -31,7 +31,7 @@ describe('AskMentorForm', () => {
     });
   });
 
-  it('should send form woth correct data', async () => {
+  it('should send form with correct data', async () => {
     await screen.getByRole('button').click();
 
     await waitFor(() => {
