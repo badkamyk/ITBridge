@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 export default function FormModal({ isModal, setIsModal }: { isModal: boolean; setIsModal: (value: boolean) => void }) {
   return (
     <Modal
+      data-testid="FormModal"
       open={isModal}
       onClose={() => setIsModal(false)}
       aria-labelledby="modal-title"
