@@ -5,6 +5,7 @@ import { languageSVGIcons } from '../../../shared/utils/languageSVGIcons';
 export default function QuestionCard(question: QuestionType) {
   return (
     <Box
+      data-testid="QuestionCard"
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -20,7 +21,12 @@ export default function QuestionCard(question: QuestionType) {
           alignItems: 'center',
         }}
       >
-        <Box component={'svg'} sx={{ width: 36, height: 36, borderRadius: '33%' }} viewBox="0 0 128 128">
+        <Box
+          data-testid="LanguageIcon"
+          component={'svg'}
+          sx={{ width: 36, height: 36, borderRadius: '33%' }}
+          viewBox="0 0 128 128"
+        >
           {languageSVGIcons[question.language]}
         </Box>
         <Typography
