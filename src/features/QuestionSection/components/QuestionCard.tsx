@@ -63,7 +63,19 @@ export default function QuestionCard(question: QuestionType) {
           maxWidth: '70%',
         }}
       >
-        {question.answer ? question.answer : 'We will answer this question soon 😊'}
+        <Typography
+          variant="h6"
+          component="p"
+          sx={{
+            mt: { xs: 1, sm: 0 },
+            ml: 1,
+            color: 'white',
+            borderRadius: 6,
+            width: 'fit-content',
+          }}
+        >
+          {question.answer ? question.answer : 'We will answer this question soon 😊'}
+        </Typography>
       </Typography>
     </Box>
   );
